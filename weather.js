@@ -37,14 +37,16 @@ function gotData(data) {
 function draw() {
   background(255, 255, 242);
   textFont(mohave)
-  textSize(60);
+
   if (weather) {
     fill(0);
-    textAlign(LEFT,TOP)
-    text(weather.current.temp_f + " ºF",0,130);
-    text(weather.current.condition.text, 0, 70);
+    textAlign(LEFT,BOTTOM)
     textSize(80);
-    text(weather.location.name + ', ' + weather.location.region,0,0);
+    text(weather.location.name + ', ' + weather.location.region,0,80);
+    textSize(60);
+    text(weather.current.condition.text, 0, 150);
+    text(weather.current.temp_f + " ºF",0,220);
+
     weatherImage();
   }
 
@@ -57,6 +59,6 @@ function windowResized() {
 
 function weatherImage() {
   if (weather.current.condition.code == '1000') {
-    image(night_clear,100,100);
+    image(night_clear,200,90);
   }
 }
