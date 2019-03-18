@@ -51,6 +51,7 @@ function draw() {
     text(weather.current.temp_f + " ºF",0,220);
     text(weather.current.wind_mph  + " mph",0,290);
 
+
     weatherImage();
   }
 
@@ -68,6 +69,7 @@ function weatherImage() {
     }
     if (weather.current.condition.code == "1003"){
       image(day_partly_cloudy,290,90);
+
     }
 
 
@@ -83,6 +85,7 @@ function weatherImage() {
   }
   if (weather.current.condition.code == "1003"){
     image(night_partly_cloudy,290,90);
+
   }
 
 
