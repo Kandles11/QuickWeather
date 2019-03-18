@@ -13,6 +13,7 @@ var city = "~"
 function preload() {
   mohave = loadFont('assets/Mohave-Medium.ttf');
   night_clear = loadImage('assets/Night Clear.png');
+  day_sunny = loadImage('assets/Day Sunny.png');
 }
 
 
@@ -58,7 +59,23 @@ function windowResized() {
 }
 
 function weatherImage() {
-  if (weather.current.condition.code == '1000') {
-    image(night_clear,200,90);
+  if (weather.current.is_day == "1"){
+    if (weather.current.condition.code == "1000"){
+      image(day_sunny,200,90);
+    }
+
+
+
+
+
+
+
+
+  } else {
+    if (weather.current.condition.code == "1000"){
+      image(night_clear,200,90);
   }
+
+
+}
 }
