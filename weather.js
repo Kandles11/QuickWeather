@@ -11,9 +11,11 @@ var city = "~"
 
 
 function preload() {
-  mohave = loadFont('assets/Mohave-Medium.ttf');
-  night_clear = loadImage('assets/Night Clear.png');
-  day_sunny = loadImage('assets/Day Sunny.png');
+  mohave = loadFont('assets/fonts/Mohave-Medium.ttf');
+  night_clear = loadImage('assets/night weather conditions/Night Clear.png');
+  day_sunny = loadImage('assets/day weather conditions/Day Sunny.png');
+  day_partly_cloudy = loadImage('assets/day weather conditions/Day Partly Cloudy.png');
+  night_partly_cloudy = loadImage('assets/night weather conditions/Night Partly Cloudy.png');
 }
 
 
@@ -63,6 +65,9 @@ function weatherImage() {
     if (weather.current.condition.code == "1000"){
       image(day_sunny,200,90);
     }
+    if (weather.current.condition.code == "1003"){
+      image(day_partly_cloudy,280,90);
+    }
 
 
 
@@ -75,6 +80,14 @@ function weatherImage() {
     if (weather.current.condition.code == "1000"){
       image(night_clear,200,90);
   }
+  if (weather.current.condition.code == "1003"){
+    image(night_partly_cloudy,280,90);
+  }
+
+
+
+
+
 
 
 }
