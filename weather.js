@@ -77,6 +77,9 @@ function weatherImage() {
     if (weather.current.condition.code == "1030"){
       image(day_mist,290,90);
     }
+    if (weather.current.condition.code == "1063"){
+      image(day_patchy_rain,290,90);
+    }
 
 
 
@@ -95,7 +98,9 @@ function weatherImage() {
   if (weather.current.condition.code == "1030"){
     image(night_mist,290,90);
   }
-
+  if (weather.current.condition.code == "1063"){
+    image(night_patchy_rain,290,90);
+  }
 
 
 
