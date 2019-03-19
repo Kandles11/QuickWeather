@@ -16,6 +16,10 @@ function preload() {
   day_sunny = loadImage('assets/day weather conditions/Day Sunny.png');
   day_partly_cloudy = loadImage('assets/day weather conditions/Day Partly Cloudy.png');
   night_partly_cloudy = loadImage('assets/night weather conditions/Night Partly Cloudy.png');
+  day_mist = loadImage('assets/day weather conditions/Day Mist.png');
+  night_mist = loadImage('assets/night weather conditions/Night Mist.png');
+  day_patchy_rain = loadImage('assets/day weather conditions/Day Patchy Rain Possible.png');
+  night_patchy_rain = loadImage('assets/night weather conditions/Night Patchy Rain Possible.png');
 }
 
 
@@ -69,7 +73,9 @@ function weatherImage() {
     }
     if (weather.current.condition.code == "1003"){
       image(day_partly_cloudy,290,90);
-
+    }
+    if (weather.current.condition.code == "1030"){
+      image(day_mist,290,90);
     }
 
 
@@ -85,7 +91,9 @@ function weatherImage() {
   }
   if (weather.current.condition.code == "1003"){
     image(night_partly_cloudy,290,90);
-
+  }
+  if (weather.current.condition.code == "1030"){
+    image(night_mist,290,90);
   }
 
 
