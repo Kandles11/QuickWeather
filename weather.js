@@ -1,8 +1,8 @@
 
 var weather;
 
-var api = 'https://api.apixu.com/v1/current.json?'
-var apiKey = 'key=e9094bc077f84b29b2d75019191703'
+var api = 'http://api.weatherstack.com/current?'
+var apiKey = 'access_key=d981b7ee5111e91147f56f3c94afaf07'
 
 
 var input;
@@ -29,7 +29,7 @@ function setup() {
 }
 
 function weatherAsk() {
-  var url = api + apiKey + '&q=' + input.value()
+  var url = api + apiKey + '&query=' + input.value()
   loadJSON(url, gotData);
 }
 
