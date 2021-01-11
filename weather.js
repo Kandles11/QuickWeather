@@ -29,7 +29,7 @@ function setup() {
 }
 
 function weatherAsk() {
-  var url = api + apiKey + '&query=' + input.value()
+  var url = api + apiKey + '&query=' + input.value() + '&callback=getdata';
   loadJSON(url, gotData);
 }
 
